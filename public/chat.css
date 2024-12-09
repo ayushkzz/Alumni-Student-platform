@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: url('nasa.jpg') no-repeat center center/cover;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  backdrop-filter: blur(0px);
+}
+
+.title {
+  color: white;
+  margin: 20px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.main {
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+}
+
+.name {
+  display: flex;
+  font-size: 26px;
+  font-weight: 400;
+  padding: 6px 14px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.name > span {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.name-input {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  flex-grow: 1;
+  border: none;
+  margin: 0px 12px;
+  outline: none;
+  background: transparent;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.1);
+  width: 400px;
+  height: 450px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.message-left,
+.message-right {
+  list-style: none;
+  padding: 8px 12px;
+  margin: 12px;
+  max-width: 250px;
+  font-size: 18px;
+  word-wrap: break-word;
+  backdrop-filter: blur(8px);
+}
+
+.message-left {
+  border-radius: 20px 20px 20px 0px;
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+.message-right {
+  border-radius: 20px 20px 0px 20px;
+  align-self: flex-end;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.message-left > p > span,
+.message-right > p > span {
+  display: block;
+  font-style: italic;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.feedback {
+  font-style: italic;
+  font-size: 14px;
+  padding: 0px 16px 16px 16px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.message-form {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 0 0 10px 10px;
+}
+
+.message-input {
+  flex-grow: 1;
+  height: 48px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  background: transparent;
+  color: #fff;
+}
+
+.send-button {
+  height: 48px;
+  font-size: 17px;
+  border: none;
+  padding: 0px 20px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.4);
+  color: #000;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: background 0.3s ease;
+}
+
+.send-button:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.v-divider {
+  height: 48px;
+  width: 0px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.clients-total {
+  margin: 20px 0;
+  color: rgba(255, 255, 255, 0.7);
+}

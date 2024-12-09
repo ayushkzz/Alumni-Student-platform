@@ -1,0 +1,25 @@
+{
+  "name": "alumni-student-platform",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "author": "Ayush",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "glob": "^11.0.0",
+    "hbs": "^4.2.0",
+    "mongoose": "^8.8.4",
+    "nodemon": "^3.1.7",
+    "react": "^18.3.1",
+    "rimraf": "^6.0.1",
+    "socket.io": "^4.8.1"
+  }
+}

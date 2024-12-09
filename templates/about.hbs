@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Alumni-Student Platform</title>
+    <link rel="stylesheet" href="about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h2 class="logo">Logo</h2>
+        <nav class="navigation">
+            <a href="/home-login">Home</a>
+            <a href="/search">Search</a>
+            <a href="/mentorship">Mentorship</a>
+            <a href="/about">About</a>
+            {{#if loggedIn}} 
+                <div class="user-icon" onclick="toggleDropdown()"> 
+                <span class="icon">
+                    <ion-icon name="person-circle-outline"></ion-icon>
+                </span>
+                    <div id="dropdownMenu" class="dropdown" style="display: none;">
+                        <div onclick="editProfile()">Edit Profile</div>
+                        <div onclick="logout()">Log Out</div>
+                    </div>
+                </div>
+            {{else}}
+                <button class="btnLogin-popup" onclick="location.href='/login'">Login</button>
+                <button class="btnSignup-popup" onclick="location.href='/signup'">Sign Up</button>
+            {{/if}}
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="about-content">
+            <h1>About Us</h1>
+            <p>The Alumni-Student Platform connects students with alumni for mentorship, career opportunities, and networking. It is a space where students can receive guidance and advice from experienced alumni while also fostering professional relationships that can help in their career development.</p>
+            <p>Our goal is to bridge the gap between students and alumni, providing a seamless platform for collaboration and growth.</p>
+        </div>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script> 
+        function toggleDropdown() { 
+            const dropdown = document.getElementById("dropdownMenu"); 
+            dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+        }
+        function editProfile() {
+            window.location.href = '/edit-profile';
+        }
+        function logout() {
+            window.location.href = '/logout';
+        } 
+        document.addEventListener('click', function(event) { const isClickInside = document.querySelector('.user-icon').contains(event.target);
+        if (!isClickInside) { 
+            document.getElementById("dropdownMenu").style.display = "none"; 
+        }  
+    });
+    </script>
+</body>
+</html>

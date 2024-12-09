@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('nasa.jpg') no-repeat center center/cover;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px; /* Increased padding for larger header size */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 2em;
+    color: white;
+    user-select: none;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    line-height: 1.5;
+}
+
+.navigation a::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    transform-origin: right;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.icon {
+    margin-top: 10px;
+    align-items: center;
+    font-size: 2em;
+}
+
+.user-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-size: 1em;
+    margin-left: 40px;
+}
+
+.dropdown {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 70px;
+    right: 30px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    display: none;
+    width: 150px;
+    text-align: center;
+}
+
+
+.dropdown div {
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.dropdown div::after {
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.dropdown div:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Login Form Wrapper */
+.wrapper {
+    position: relative;
+    width: 380px;
+    height: 460px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(7px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+    color: #fff;
+}
+
+.form-box {
+    background: transparent;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #fff;
+    margin: 30px 0;
+    font-size: 1em;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: .9em;
+    color: #fff;
+    font-weight: 300;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    top: 10px;
+}
+
+.input-box .edit-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.input-box .edit-icon:hover {
+    color: #1e90ff;
+}
+
+/* Error Message */
+.error-message {
+    color: #d9534f;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Submit Button */
+.btn {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: white;
+    color: #012245;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    font-size: 1em;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    color: #012245;
+}
